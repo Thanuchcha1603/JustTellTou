@@ -90,7 +90,7 @@
                     <c:when test="${id.reviewText == null && r.reviewerFname == sessionScope.user.fname&&sessionScope.user!=null }"> 
 
                         <!--<input type="textarea"  name="review">-->
-                        <textarea placeholder="review" name="review" rows="10" cols="200">Write Review!</textarea>
+                        <textarea placeholder="review" name="review" rows="10" cols="200"></textarea>
                         <hr>
 
                         <p><b>Rating:</b></p>
@@ -130,7 +130,7 @@
                 <c:choose>
                     <c:when test="${sessionScope.user!=null}">  
 
-                        <textarea placeholder="comment" name="comment" rows="5" cols="50">Write Comment!</textarea>
+                        <textarea placeholder="comment" name="comment" rows="5" cols="50"></textarea>
                         <!--<input type="text" name="comment">-->
                         <br>  
                         <button type="submit" class="btn btn-dark " >Comment</button></a>
