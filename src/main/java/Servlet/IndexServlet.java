@@ -52,7 +52,7 @@ public class IndexServlet extends HttpServlet {
 
         Movie m = new Movie();
         List<Categories> rs = m.getCategoriesList();
-      
+
         Query a = em.createNamedQuery("Categories.findAll");
         request.setAttribute("r", a.getResultList());
 
@@ -61,9 +61,8 @@ public class IndexServlet extends HttpServlet {
         Query c = em.createQuery("select r from ReviewMovie r WHERE r.rating >= 8.0");
         List<ReviewMovie> bestmv = c.getResultList();
         List<ReviewMovie> cs = cc.getResultList();
-        
-        request.setAttribute("bestmv", bestmv);
 
+        request.setAttribute("bestmv", bestmv);
 
         request.setAttribute("rs", rs);
         request.setAttribute("cs", cs);
